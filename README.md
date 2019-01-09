@@ -5,6 +5,7 @@ Analysis of police shooting deaths in Minnesota
 Previous versions are found here:
 
 [https://github.com/striblab/20170719-police_shootings](https://github.com/striblab/20170719-police_shootings)
+
 [https://github.com/striblab/20151117-police_deaths](https://github.com/striblab/20151117-police_deaths)
 
 
