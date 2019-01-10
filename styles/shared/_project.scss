@@ -177,15 +177,15 @@ a:hover {
 .card {
     position: relative;
     padding: 10px;
-    height: 235px;
-    width: 450px;
+    height: auto;
+    width: 48%;
     font-size: .85em;
     line-height: 140%;
     display: inline-block;
     vertical-align: top;
     background-color: #eee;
     margin-bottom: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .card div {
@@ -316,12 +316,9 @@ li {
 }
 
 #deathsTable {
-    width: 980px;
-    margin-left: -20px;
-    height:490px;
-    overflow-x:hidden;
-    overflow-y:auto;
+    width: 100%
 }
+
 .navButton {
   width: 100%;
   background-color: #ddd;
@@ -792,9 +789,9 @@ h1.mobile-hedline {
   }
   
   .card {
-      padding: 20px;
+      padding: 10px;
       height: auto !important;
-      width: 62%;
+      width: 48%;
       display: block;
   }
   
@@ -911,9 +908,9 @@ h1.mobile-hedline {
   }
   
   .card {
-      padding: 20px;
+      padding: 10px;
       height: auto !important;
-      width: 44%;
+      width: 48%;
       display: block;
   }
   
