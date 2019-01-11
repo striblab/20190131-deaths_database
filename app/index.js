@@ -122,7 +122,7 @@ d3.select("#deathsTable").selectAll(".card")
         if (d.URL != "#") {
             linkString = "<div class='url'><a href='" + d.URL + "' target='new_'>More coverage</a></div>";
         }
-        return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender + " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.time.format("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='http://stmedia.stimg.co/" + d.photo + "?h=155&w=150&fit=crop&bg=999&crop=faces' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Read more</div>";
+        return "<div class='leftSide'><div class='name'>" + d.FirstName + " " + d.LastName + " " + d.Suffix + "</div><div class='stats'>" + d.AgeYears + " &#8226; " + d.Occupation + "</div><div class='description_chatter'>" + d.StribNarrative + "</div><div class='stats'>" + d.Race + " &#8226; " + d.Gender + " &#8226; " + d.ResCity + "</div><div class='location'>Incident: " + d3.timeFormat("%m-%d-%Y")(new Date(d.DeathDate)) + " &#8226; Location: " + d.InjuryCity + " &#8226; Agency: " + d.Agency + "</div><div class='ruling'>Weapon: " + d.Weapon + " &#8226 Ruling: " + d.MannerDeath + "</div>" + mentalStatus + "</div><div class='rightSide'><div class='photo'><img src='http://stmedia.stimg.co/" + d.photo + "?h=155&w=150&fit=crop&bg=999&crop=faces' /></div></div><div class='weaponType'>" + d.WeaponCategory + "</div><div class='region'>" + d.Region + "</div><div class='break'></div>" + linkString + "<div class='readmore'>Read more</div>";
     });
 addBoxes();
 $(".card").on("click", function() {
@@ -296,8 +296,6 @@ function spitDots(year) {
 
 function chartMobile() {
 
-    console.log(incidents);
-
     var padding = {
         top: 20,
         right: 40,
@@ -459,7 +457,7 @@ $('#filter_box').keyup(function(i) {
     }
 });
 // });
-$.getJSON('shapefiles/counties.json', function(counties) {
+$.getJSON('./data/counties.json', function(counties) {
     //FILTER STUFF
     $("#mainFilters .filter3 a, #mainFilters .filter2 a, #mainFilters .filter a").css("background", "#fff");
     // $(document).bind('DOMNodeInserted', function(event) {
