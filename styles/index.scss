@@ -30,3 +30,141 @@ $selector-wrapper: '.strib-styles.ssa.ssb.ssc';
   @import 'shared/_project';
 }
 
+.tooltip .name {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 4px;
+  width: 150px;
+}
+
+.tooltip .mentalSwatch {
+  font-size: 1em;
+  color: #999 !important;
+  background-color: #fff !important;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 0;
+  border-radius: none;
+}
+
+.tooltip {
+  font-family: "Benton Sans", Helvetica, Arial, sans-serif;
+  background-color: white;
+  height: auto;
+  width: 150px;
+  padding: 10px;
+  border-radius: 0;
+  border: 1px solid black;
+  font-size: 13px;
+  font-family: Arial;
+}
+
+
+.featherlight-content {
+  pointer-events: none !important;
+}
+.featherlight-content .url,
+.url a {
+  pointer-events: all !important;
+}
+.featherlight .featherlight-content {
+    background-color: #eee;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.featherlight-content {
+    width: 750px;
+    height: 450px;
+}
+
+.description_chatter,
+.url {
+    display: none;
+}
+
+.featherlight-content .description_chatter {
+    display: block !important;
+}
+
+.featherlight-content .readmore {
+    display: none;
+}
+
+.featherlight-content .url {
+    display: block !important;
+}
+
+.featherlight-content .card {
+    width: 100% !important;
+    background-color: #ffffff;
+    font-size: .9em;
+    border: 0 !important;
+}
+
+.featherlight-content .card:hover {
+    opacity: 1 !important;
+    cursor: normal !important;
+}
+
+.featherlight .featherlight-content,
+.featherlight-content .card {
+    width: 75% !important;
+    background-color: #ffffff !important;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+}
+
+.featherlight .featherlight-content {
+  background-color: #eee;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.featherlight-content {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.description_chatter,
+.url {
+  display: none;
+}
+
+.featherlight-content .description_chatter {
+  display: block !important;
+}
+
+.featherlight-content .readmore {
+  display: none;
+}
+
+.featherlight-content .url {
+  display: block !important;
+}
+
+.featherlight-content .card {
+  width: 100% !important;
+  background-color: #ffffff;
+  font-size: .9em;
+  border: 0 !important;
+}
+
+.featherlight-content .card:hover {
+  opacity: 1 !important;
+  cursor: normal !important;
+}
+
+.card.featherlight-inner {
+  margin: 0 !important;
+}
+
+
+@media (max-width:770px) {
+
+  .featherlight-content {
+      width: 98%;
+      height: auto;
+  }
+}

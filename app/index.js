@@ -68,7 +68,7 @@ var mentalLoad = false;
 $('#bigCount').html(dataShootings.length);
 
 $('.scrollToTop').click(function() {
-    $('body').animate({
+    $('html, body').animate({
         scrollTop: 0
     }, 800);
     return false;
@@ -280,6 +280,9 @@ function spitDots(year) {
             if (d.year == 2018) {
                 incidents[19]++;
             }
+            if (d.year == 2019) {
+                incidents[20]++;
+            }
 
             return "";
 
@@ -309,8 +312,8 @@ function chartMobile() {
         data: {
             x: 'x',
             columns: [
-                ['x', 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
-                ["Incident", 7, 9, 8, 7, 9, 5, 6, 7, 8, 11, 12, 8, 11, 11, 9, 13, 13, 10, 3]
+                ['x', 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
+                ["Incident", 7, 9, 8, 7, 9, 5, 6, 7, 8, 11, 12, 8, 11, 11, 9, 13, 13, 10, 13, 1]
             ],
             type: 'bar',
             labels: {
@@ -346,7 +349,7 @@ function chartMobile() {
             x: {
                 tick: {
                     count: 19,
-                    values: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+                    values: [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019],
                     format: d3.format('.0f')
                 }
             }
@@ -425,7 +428,7 @@ d3.helper.tooltip = function(accessor) {
             });
     };
 };
-for (var i = 2000; i <= 2018; i++) {
+for (var i = 2000; i <= 2019; i++) {
     spitDots(i);
 }
 //SEARCH FILTER TABLE
