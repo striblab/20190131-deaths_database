@@ -67,6 +67,28 @@ $selector-wrapper: '.strib-styles.ssa.ssb.ssc';
  * MIT Licensed.
 **/
 
+.featherlight .name {
+	font-weight:bold;
+}
+
+.featherlight .weaponType, .featherlight .region {
+	display:none;
+}
+
+.featherlight .card .leftSide div {
+	line-height:160% !important;
+}
+
+.featherlight .url {
+	font-weight:bold;
+	margin-top:10px;
+}
+
+.featherlight .leftSide {
+	float:right;
+	width:80%;
+}
+
 html.with-featherlight {
 	/* disable global scrolling when featherlights are visible */
 	overflow: hidden;
@@ -322,4 +344,8 @@ html.with-featherlight {
       width: 98%;
       height: auto;
   }
+  .featherlight .leftSide {
+	float:none;
+	width:100%;
+}
 }
