@@ -460,7 +460,7 @@ $('#filter_box').keyup(function(i) {
     }
 });
 // });
-$.getJSON('./data/counties.json', function(counties) {
+
     //FILTER STUFF
     $("#mainFilters .filter3 a, #mainFilters .filter2 a, #mainFilters .filter a").css("background", "#fff");
     // $(document).bind('DOMNodeInserted', function(event) {
@@ -943,5 +943,3 @@ $.getJSON('./data/counties.json', function(counties) {
         var count = $('.card:visible').length;
         $('.results').html(count);
     });
-
-});
