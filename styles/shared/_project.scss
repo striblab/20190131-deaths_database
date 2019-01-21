@@ -23,6 +23,15 @@ section.container-lg {
   stroke-dasharray: 5, 5;
   stroke: #333;
 }
+
+.byline time {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #959595;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
 p {
     max-width:520px;
     font-size:15px;
