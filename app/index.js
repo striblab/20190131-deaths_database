@@ -13,8 +13,6 @@ import utils from './shared/utils.js';
 // Mark page with note about development or staging
 utils.environmentNoting();
 
-
-
 // Adding dependencies
 // ---------------------------------
 // Import local ES6 or CommonJS modules like this:
@@ -943,3 +941,18 @@ $('#filter_box').keyup(function(i) {
         var count = $('.card:visible').length;
         $('.results').html(count);
     });
+
+function googleAnalytics() {
+    window.dataLayer = window.dataLayer || [];
+    window.gaId = 'UA-114906116-1';
+
+    window.gtag = function() {
+    window.dataLayer.push(arguments);
+    };
+
+    window.gtag('js', new Date());
+    window.gtag('config', window.gaId);
+    return window.gtag;
+}
+
+googleAnalytics();
