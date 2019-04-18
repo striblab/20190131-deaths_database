@@ -4,17 +4,15 @@ Analysis of police shooting deaths in Minnesota
 
 Previous versions are found here:
 
-[https://github.com/striblab/20170719-police_shootings](https://github.com/striblab/20170719-police_shootings)
+- [https://github.com/striblab/20170719-police_shootings](https://github.com/striblab/20170719-police_shootings)
+- [https://github.com/striblab/20151117-police_deaths](https://github.com/striblab/20151117-police_deaths)
 
-[https://github.com/striblab/20151117-police_deaths](https://github.com/striblab/20151117-police_deaths)
+## Data
 
+Data managed in this [Google spreadheet](https://docs.google.com/spreadsheets/d/1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA/edit#gid=1024005488).
 
-## Data analysis
-
-_<Quickyly describe data needed for project.>_
-
-See [docs/data-analysis.md](./docs/data-analysis.md).
-
+- Update shootings with: `echo '{"mn_shootings":' > sources/shootings.json && curl -L --silent "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0w85Bu0-HbCr5rpJze-I-LdevRqVTIoBiF27ToQaD8VZWl0_syKeF7smvjKJTY4pqZ1wrbc1Rf7pt/pub?gid=1024005488&single=true&output=csv" | csvjson >> sources/shootings.json && echo "}\n" >> sources/shootings.json;`
+- Update chatter text with: `echo '{"viz_chatter":' > sources/chatter.json && curl -L --silent "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0w85Bu0-HbCr5rpJze-I-LdevRqVTIoBiF27ToQaD8VZWl0_syKeF7smvjKJTY4pqZ1wrbc1Rf7pt/pub?gid=1459352675&single=true&output=csv" | csvjson >> sources/chatter.json && echo "}\n" >> sources/chatter.json;`
 
 ## Publishing
 
