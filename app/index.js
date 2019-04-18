@@ -5,7 +5,7 @@
 // Define globals that are added through the js.globals in
 // the config.json file, here, mostly so linting won't get triggered
 // and its a good queue of what is available:
-/* global $ */
+/* global $, _ */
 
 // Dependencies
 import utils from './shared/utils.js';
@@ -385,58 +385,25 @@ $(document).ready(function() {
       left: 40
     };
 
+    var sortedYears = _.sortBy(
+      _.uniq(_.map(dataShootings, d => parseInt(d.year, 10)))
+    );
+    var countsByYears = _.map(
+      _.sortBy(
+        _.groupBy(dataShootings, d => parseInt(d.year, 10)),
+        (d, di) => di
+      ),
+      'length'
+    );
+
     var chartCounts = c3.generate({
       bindto: '#chartMobile',
       padding: padding,
       data: {
         x: 'x',
         columns: [
-          [
-            'x',
-            2000,
-            2001,
-            2002,
-            2003,
-            2004,
-            2005,
-            2006,
-            2007,
-            2008,
-            2009,
-            2010,
-            2011,
-            2012,
-            2013,
-            2014,
-            2015,
-            2016,
-            2017,
-            2018,
-            2019
-          ],
-          [
-            'Incident',
-            7,
-            9,
-            8,
-            7,
-            9,
-            5,
-            6,
-            7,
-            8,
-            11,
-            12,
-            8,
-            11,
-            11,
-            9,
-            13,
-            13,
-            10,
-            13,
-            1
-          ]
+          ['x'].concat(sortedYears),
+          ['Incident'].concat(countsByYears)
         ],
         type: 'bar',
         labels: {
@@ -471,29 +438,8 @@ $(document).ready(function() {
         },
         x: {
           tick: {
-            count: 19,
-            values: [
-              2000,
-              2001,
-              2002,
-              2003,
-              2004,
-              2005,
-              2006,
-              2007,
-              2008,
-              2009,
-              2010,
-              2011,
-              2012,
-              2013,
-              2014,
-              2015,
-              2016,
-              2017,
-              2018,
-              2019
-            ],
+            count: sortedYears.length,
+            values: sortedYears,
             format: d3.format('.0f')
           }
         }
