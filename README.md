@@ -13,6 +13,7 @@ Data managed in this [Google spreadheet](https://docs.google.com/spreadsheets/d/
 
 - Update shootings with: `echo '{"mn_shootings":' > sources/shootings.json && curl -L --silent "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0w85Bu0-HbCr5rpJze-I-LdevRqVTIoBiF27ToQaD8VZWl0_syKeF7smvjKJTY4pqZ1wrbc1Rf7pt/pub?gid=1024005488&single=true&output=csv" | csvjson >> sources/shootings.json && echo "}\n" >> sources/shootings.json;`
 - Update chatter text with: `echo '{"viz_chatter":' > sources/chatter.json && curl -L --silent "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0w85Bu0-HbCr5rpJze-I-LdevRqVTIoBiF27ToQaD8VZWl0_syKeF7smvjKJTY4pqZ1wrbc1Rf7pt/pub?gid=1459352675&single=true&output=csv" | csvjson >> sources/chatter.json && echo "}\n" >> sources/chatter.json;`
+- Don't forget to update the **last updated** date in the header.
 
 ## Publishing
 

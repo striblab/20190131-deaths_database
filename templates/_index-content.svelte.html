@@ -2,46 +2,46 @@
     <section class="container-lg elex-header">
         <h5 class="font-popular-light"><span class="font-popular-medium"></span></h5>
         <h1>Every police-involved death in Minnesota since 2000</h1>
-        <p class="byline">By <a href="http://www.startribune.com/jeff-hargarten/274254381/">Jeff Hargarten</a>, <a href="http://www.startribune.com/jennifer-bjorhus/34031274/">Jennifer Bjorhus</a>, <a href="http://www.startribune.com/maryjo-webster/303594441/">MaryJo Webster</a> and <a href="http://www.startribune.com/kelly-smith/101372379/">Kelly Smith</a> • <span>Star Tribune</span> <span class="spacer-alt"></span> <span class="article-dateline"><time pubdate datetime="2018-10-25T16:00:00">Updated January 21, 2019</time></span></p> 
+        <p class="byline">By <a href="http://www.startribune.com/jeff-hargarten/274254381/">Jeff Hargarten</a>, <a href="http://www.startribune.com/jennifer-bjorhus/34031274/">Jennifer Bjorhus</a>, <a href="http://www.startribune.com/maryjo-webster/303594441/">MaryJo Webster</a> and <a href="http://www.startribune.com/kelly-smith/101372379/">Kelly Smith</a> • <span>Star Tribune</span> <span class="spacer-alt"></span> <span class="article-dateline"><time pubdate datetime="2019-04-18T08:00:00">Updated April 18, 2019</time></span></p>
       </section>
-  
+
       <p></p>
-  
+
       <section class="container-lg leadin">
           <p>The Star Tribune <a href="http://www.startribune.com/how-we-counted-police-involved-deaths/380709141">collected the names</a> and stories of everyone who died after a physical confrontation with law enforcement in Minnesota since January 2000, and continues to update this database as new incidents occur. Information is subject to change as cases develop.</p>
       </section>
 
       <div class="rule"></div>
-      
+
   <section class="container-lg">
     <div id="wrapper">
 
       <div id="bigCount"><p class="load"><img src="http://static.startribune.com/news/projects/all/20190131-deaths_database/img/loading.gif" alt="loading" /></p></div>
-      <div id="deathLabel">deaths since 2000</div>	
+      <div id="deathLabel">deaths since 2000</div>
 
       <div id="chartMobile"></div>
-      
+
       <div id="filterBox">
-      
+
       <div id="filterButtons">
       <div id="all" class="bigswitch" data="all">All deaths</div><div id="raceB" class="switch" data="race">Race</div><div id="genderB" class="switch" data="gender">Gender</div><div id="mannerB" class="switch" data="manner">Manner</div><div id="placeB" class="switch" data="place">Location</div><div id="weaponB" class="switch" data="weapon">Weapon</div>
        </div>
-      
+
       <div class="breaker"></div>
-      
+
       <div id="selector">
          <div id="all_m" class="bigswitch" data="all">All deaths</div><div id="mentalB_m" class="bigswitch selected" data="mental">Mental health</div>
       <div id="resultBar_m"><span class="results"></span> <span>deaths</span></div>
       </div>
-      
+
            <div class="chart" id="chartAll">
-      
+
       <div id="topClickies">
 
       <p></p>
-      
+
       <div id="clickyStuff">Roll over each dot to see individuals</div>
-      
+
       <div id="mainFilters">
                     <ul class="dropdown race" tabindex="1">
               <div class='filterBreak'></div>
@@ -72,18 +72,18 @@
               <div class='filter' data="SUICIDE" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Suicide</a> <div class="count">0</div></div>
               <div class='filter' data="ACCIDENT" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Accidental Death</a> <div class="count">0</div></div>
               <div class='filter' data="NATURAL" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">Natural Causes</a> <div class="count">0</div></div>
-              <div class='filter' data="UNDETERMINED" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">NA</a> <div class="count">0</div></div> 
+              <div class='filter' data="UNDETERMINED" metric="manner"><span class="bigDot"></span><a href="javascript:void(0)">NA</a> <div class="count">0</div></div>
               </div>
               <div class="filterSection weapon">
               <div class='filter2' data="GUN" metric="weapon"><span id="weaponDot" class="bigDot"></span><a href="javascript:void(0)">Gun</a> <div class="count">0</div></div>
               <div class='filter2' data="BLADED WEAPON" metric="weapon"><span class="bigDot"></span><a href="javascript:void(0)">Bladed Weapon</a> <div class="count">0</div></div>
               <div class='filter2' data="OTHER" metric="weapon"><span class="bigDot"></span><a href="javascript:void(0)">Other Weapon</a> <div class="count">0</div></div>
-              <div class='filter2' data="UNARMED" metric="weapon"><span class="bigDot"></span><a href="javascript:void(0)">Unarmed</a> <div class="count">0</div></div> 
-              </div> 
+              <div class='filter2' data="UNARMED" metric="weapon"><span class="bigDot"></span><a href="javascript:void(0)">Unarmed</a> <div class="count">0</div></div>
+              </div>
                     </ul>
       </div>
       </div>
-      
+
       <div id="mainChart">
            <div id="yearLabels" style="display:none;">
             <div class="yearLabel bigcount" id="c2000">0</div>
@@ -153,31 +153,31 @@
            </div>
       </div>
              <div class="mobileNumbers"><img width="100%" height="auto" alt="" src="http://stmedia.startribune.com/images/mentalNumbers.png"></div>
-             
+
            </div>
-      
+
        <div class="breaker"></div>
-      
+
       <div class="smallerBreak"></div>
-      
+
           </div>
-      
+
       <div id="resultBar"><span>Results: </span> <span class="results"></span></div>
-      
+
       <div class="smallerBreak"></div>
-      
+
       <div id="filter"><input type="search" id="filter_box" placeholder="Search list of all deaths by name, year or keyword" /></div>
-      
+
       <div class="breaker"></div>
-      
+
            <div id="deathsTable"></div>
-      
+
           <div class="breaker"></div>
-      
+
       <div class="scrollToTop">Return to Top</div>
-      
+
       <div class="byline">Source: <a href="https://webappa.cdc.gov/sasweb/ncipc/mortrate.html" target="new_">Star Tribune analysis</a> | Graphic by <a href="http://www.startribune.com/jeff-hargarten/274254381/" target="new_">Jeff Hargarten, Star Tribune</a><!--  | <a href="./data/maindata.xlsx" target="new_">Download Data</a> --></div>
-      
+
       </div>
 
   </section>
