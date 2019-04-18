@@ -128,7 +128,9 @@ $(document).ready(function() {
         `;
       }
       if (d.URL != '#') {
-        linkString = `<div class="url"><a href="${d.URL}" target="new_">More coverage</a></div>`;
+        linkString = `<div class="url"><a href="${
+          d.URL
+        }" target="new_">More coverage</a></div>`;
       }
       return `
       <div class="leftSide">
@@ -240,10 +242,10 @@ $(document).ready(function() {
       .append('div')
       .attr('class', 'dot')
       .attr('first', function(d) {
-        return d.FirstName;
+        return d.FirstName || '';
       })
       .attr('last', function(d) {
-        return d.LastName;
+        return d.LastName || '';
       })
       .attr('gender', function(d) {
         return ' ' + d.Gender;
@@ -281,7 +283,7 @@ $(document).ready(function() {
         d3.select(this).classed('faded', false);
         d3.select(this).classed('active', true);
         $('.card').hide();
-        var txt = d.FirstName + ' ' + d.LastName;
+        var txt = `${d.FirstName || ''} ${d.LastName || ''}`;
         $('.card').each(function() {
           if (
             $(this)
@@ -363,17 +365,14 @@ $(document).ready(function() {
         d3.helper.tooltip(function(d, i) {
           var mentalStatus = '';
           if (d.Mental == 'Yes') {
-            mentalStatus =
-              '<div class=\'mentallabel\' style=\'color:#999;font-weight:900;font-size:.8em;\'>MENTAL HEALTH ISSUES</div>';
+            mentalStatus = `
+              <div class="mentallabel" style="color:#999;font-weight:900;font-size:.8em;">MENTAL HEALTH ISSUES</div>
+            `;
           }
-          return (
-            '<div class=\'name\'>' +
-            d.FirstName +
-            ' ' +
-            d.LastName +
-            '</div>' +
-            mentalStatus
-          );
+          return `
+            <div class="name">${d.FirstName || ''} ${d.LastName || ''}</div>
+            ${mentalStatus}
+          `;
         })
       );
   }
