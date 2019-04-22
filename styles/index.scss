@@ -28,6 +28,10 @@ $selector-wrapper: ".strib-styles.ssa.ssb.ssc";
   @import "shared/_project";
 }
 
+.article-dateline, .featherlight {
+  font-family: "Benton Sans",Helvetica,Arial,sans-serif !important;
+}
+
 .tooltip .name {
   font-size: 1.1em;
   color: #333;
