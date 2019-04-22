@@ -362,7 +362,7 @@ $(document).ready(function() {
         return '';
       })
       .call(
-        d3.helper.tooltip(function(d, i) {
+        tooltip(function(d, i) {
           var mentalStatus = '';
           if (d.Mental == 'Yes') {
             mentalStatus = `
@@ -491,8 +491,7 @@ $(document).ready(function() {
       d3.selectAll('.dot').classed('mentalSwatch', true);
     }
   });
-  d3.helper = {};
-  d3.helper.tooltip = function(accessor) {
+  var tooltip = function(accessor) {
     return function(selection) {
       var tooltipDiv;
       var bodyNode = d3.select('body').node();
