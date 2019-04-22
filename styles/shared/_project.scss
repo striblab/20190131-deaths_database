@@ -65,7 +65,7 @@ section.container-lg {
   .article-author-contact p {
    margin-bottom: 0 !important;
   }
-  
+
 p {
     max-width:520px;
     font-size:15px;
@@ -694,6 +694,14 @@ h1.mobile-hedline {
   .article-headline {
       display: none;
   }
+
+  .byline time {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #959595;
+    font-size: 1.1em !important;
+    font-weight: bold;
+}
   
   h1.mobile-hedline {
       display: block;
