@@ -52,8 +52,22 @@ import * as c3 from 'c3';
 // import dataLoadShootings from 'http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings';
 // import dataLoadChatter from 'http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=viz_chatter';
 
-import dataLoadShootings from '../sources/shootings.json';
 import dataLoadChatter from '../sources/chatter.json';
+
+var dataLoadShootings;
+
+function getData(callback) {
+  var dataLoad = "default";
+  $.getJSON('http://googlescript.startribune.com/?macro=AKfycbw_cqdXZADky_zHS3pi9aBL2S3-514vlxJkcnv5TJ1z9sxCqPY&id=1T-Du1geFfuspEYGF_U0531mLTJ0ehbA5YbaFCxgmkRA&sheet=mn_shootings', function (jsonData) {
+      dataLoad = jsonData;
+      callback(jsonData);
+  });
+}
+
+getData(function(data) {
+  console.log(data);
+  dataLoadShootings = data;
+
 
 $(document).ready(function() {
   // Mark page with note about development or staging
@@ -1328,4 +1342,5 @@ $(document).ready(function() {
   }
 });
 
+});
 //googleAnalytics();
